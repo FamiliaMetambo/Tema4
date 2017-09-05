@@ -5,7 +5,6 @@
  */
 package Exercicio3;
 
-import Exercicio2.*;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Vector;

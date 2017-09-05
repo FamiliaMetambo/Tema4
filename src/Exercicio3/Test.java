@@ -5,10 +5,7 @@
  */
 package Exercicio3;
 
-import Exercicio2.*;
 import static Exercicio3.Test.vector;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Vector;
 import javax.swing.JOptionPane;
 
@@ -24,6 +21,17 @@ public class Test {
 
     static Vector vector;
     
+    public static double[] array(String str){
+        double array[] = new double[1000]; int i = 0;
+        
+        do {
+                String lido = JOptionPane.showInputDialog(str);
+                if(lido.equalsIgnoreCase("C"))
+                    break;
+                array[i++] = Double.parseDouble(lido);                
+       } while(true);
+        return array;
+    }
     
     
     
@@ -31,13 +39,12 @@ public class Test {
     //Instancia a classe utilitária
 
             Estatistica e = new Estatistica();
-      
-          double array[] = {1,2,3,5,8,6,5,8,6,7,1,3,6,9,7,7,1,6,3,4,5};
-              
-              
-           
-         e.setArray(array);
+            String str = "Digite um numero: \nPara terminar digite: c";
+                                            
+            e.setArray(array(str));
 
+//            System.exit(0);
+            
           double t1 = System.currentTimeMillis();
 
             System.out.print("\n mediana: "+ e.getMediana());
